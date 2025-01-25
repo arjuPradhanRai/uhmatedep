@@ -141,7 +141,7 @@ Route::group(['middleware' => ['common', 'auth', 'active']], function() {
 
     // Languages Section
     Route::prefix('languages')->group(function () {
-        Route::get('/', [LanguageSettingController::class, 'languages'])->name('languages.index');
+        Route::get('/', [LanguageSettingController::class, 'languages'])->name('languagestest.index');
         Route::get('/{language}/translations', [LanguageSettingController::class, 'index'])->name('languages.translations.index');
         Route::post('/update', [LanguageSettingController::class, 'update'])->name('language.translations.update');
 
